@@ -23,10 +23,10 @@ class MenuListViewModel {
     }
     
     init() {
-        let menu: [Menu] = [Menu(name: "떡볶이", price: 3000, count: 0),
-                            Menu(name: "떡볶이", price: 3000, count: 0),
-                            Menu(name: "떡볶이", price: 3000, count: 0),
-                            Menu(name: "떡볶이", price: 3000, count: 0)]
+        let menu: [Menu] = [Menu(id: 1, name: "떡볶이", price: 3000, count: 0),
+                            Menu(id: 2, name: "떡볶이", price: 3000, count: 0),
+                            Menu(id: 3, name: "떡볶이", price: 3000, count: 0),
+                            Menu(id: 4, name: "떡볶이", price: 3000, count: 0)]
         
         menuObservable.onNext(menu)
     }
@@ -35,7 +35,29 @@ class MenuListViewModel {
         _ = menuObservable.map { menu in
                 let newMenu = menu
                 return newMenu.map {
-                    Menu(name: $0.name, price: $0.price, count: 0)
+                    Menu(id: $0.id,name: $0.name, price: $0.price, count: 0)
+                }
+            }
+            .take(1)        // 한 번만 수행할거야
+            .subscribe(onNext: {
+                self.menuObservable.onNext($0)
+            })
+    }
+    
+    func changeCount(item: Menu, increace: Int) {
+        _ = menuObservable.map { menu in
+                let newMenu = menu
+                return newMenu.map {
+                    // increase를 받아 더하거나 빼서 값을 갱신
+                    guard $0.id == item.id else {
+                        return Menu(id: $0.id, name: $0.name, price: $0.price, count: $0.count)
+                    }
+                    
+                    guard $0.count + increace >= 0 else {
+                        return Menu(id: $0.id, name: $0.name, price: $0.price, count: $0.count)
+                    }
+                    
+                    return Menu(id: $0.id, name: $0.name, price: $0.price, count: $0.count + increace)
                 }
             }
             .take(1)        // 한 번만 수행할거야

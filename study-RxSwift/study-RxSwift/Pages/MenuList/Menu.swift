@@ -9,6 +9,7 @@ import Foundation
 
 // Model: View를 위한 Model (View를 표현하기 위한 모델 - ViewModel)
 struct Menu {
+    let id: Int
     let name: String
     let price: Int
     let count: Int
