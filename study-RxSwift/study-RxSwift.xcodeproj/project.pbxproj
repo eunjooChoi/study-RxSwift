@@ -23,6 +23,8 @@
 		7B5B56AA29BCA2DD0068D96E /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B56A829BCA2DD0068D96E /* MenuItemTableViewCell.swift */; };
 		7B5B56AB29BCA2DD0068D96E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B56A929BCA2DD0068D96E /* MenuViewController.swift */; };
 		7BFF296329BCA42B00BE285A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF296229BCA42B00BE285A /* OrderViewController.swift */; };
+		7BFF296529BCAB0A00BE285A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF296429BCAB0A00BE285A /* Menu.swift */; };
+		7BFF296729BCAE3D00BE285A /* MenuListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF296629BCAE3D00BE285A /* MenuListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7B5B56A829BCA2DD0068D96E /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		7B5B56A929BCA2DD0068D96E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7BFF296229BCA42B00BE285A /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		7BFF296429BCAB0A00BE285A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		7BFF296629BCAE3D00BE285A /* MenuListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +147,10 @@
 		7B5B56A729BCA2DD0068D96E /* MenuList */ = {
 			isa = PBXGroup;
 			children = (
-				7B5B56A829BCA2DD0068D96E /* MenuItemTableViewCell.swift */,
+				7BFF296429BCAB0A00BE285A /* Menu.swift */,
+				7BFF296629BCAE3D00BE285A /* MenuListViewModel.swift */,
 				7B5B56A929BCA2DD0068D96E /* MenuViewController.swift */,
+				7B5B56A829BCA2DD0068D96E /* MenuItemTableViewCell.swift */,
 			);
 			name = MenuList;
 			path = "../../../study-RxSwift/study-RxSwift/Pages/MenuList";
@@ -235,10 +241,12 @@
 				7B5B56A429BCA1180068D96E /* Extensions.swift in Sources */,
 				7B5B569829BCA0E60068D96E /* APIService.swift in Sources */,
 				7B5B567529BC9EC40068D96E /* AppDelegate.swift in Sources */,
+				7BFF296529BCAB0A00BE285A /* Menu.swift in Sources */,
 				7B5B56AA29BCA2DD0068D96E /* MenuItemTableViewCell.swift in Sources */,
 				7B5B567729BC9EC40068D96E /* SceneDelegate.swift in Sources */,
 				7B5B569729BCA0E60068D96E /* Model.swift in Sources */,
 				7B5B56AB29BCA2DD0068D96E /* MenuViewController.swift in Sources */,
+				7BFF296729BCAE3D00BE285A /* MenuListViewModel.swift in Sources */,
 				7BFF296329BCA42B00BE285A /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -162,9 +162,6 @@
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BGa-xQ-HDQ" id="gms-6x-FLB"/>
-                                        </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DX1-Oo-ECf">
                                         <rect key="frame" x="0.0" y="588.66666666666663" width="393" height="122.33333333333337"/>
