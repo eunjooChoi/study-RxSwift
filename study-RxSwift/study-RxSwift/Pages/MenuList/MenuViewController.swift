@@ -85,5 +85,6 @@ class MenuViewController: UIViewController {
         // TODO: no selection
         // showAlert("Order Fail", "No Orders")
         //performSegue(withIdentifier: "OrderViewController", sender: nil)
+        viewModel.order()
     }
 }
